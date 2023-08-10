@@ -1,0 +1,48 @@
+a.top-banner(href="" style="background-image:url(./img/top-banner.jpg)")
+.bg-menu
+header.header
+	.container.container_flex
+		a.logo(href="/index.html")
+			img(src="./img/logo.png" alt="")
+		button.nav-catalog 
+			span.hamburger.hamburger--squeeze.js-hamburger
+				.hamburger-box
+					.hamburger-inner
+			| Каталог
+		.header__search
+			form.search-form(action="")
+				input(type="text" placeholder="Искать товары")
+				input(type="submit" value="")
+		.header__links
+			a.header__link(href="")
+				img(src="./img/user.png" alt="")
+				| Войти
+			a.header__link(href="")
+				img(src="./img/shopping-bag.png" alt="")
+				| Заказы
+			a.header__link(href="")
+				img(src="./img/heart.png" alt="")
+				| Избранное
+			a.header__link(href="")
+				img(src="./img/shopping-cart.png" alt="")
+				| Корзина
+	nav.menu
+		.container
+			.menu__title Каталог оборудования
+			ul.menu-list
+				li
+					a(href="") Для фаст-фуда
+					ul.menu-list__sub
+						each val in ['Аппараты','Блинницы','Вафельницы','Витрины тепловые','Грили','Дегидраторы','Индукционные плиты','Макароноварка','Пароварки','Печи','Поверхности жарочные','Рисоварки','Фритюрницы','Чебуречницы']
+							li.has-sub-menu
+								a(href="")= val
+								ul.menu-list__sub-sub 
+									each val in ['Барбекю','Контактные','Куры','Лавовые','Роликовые','Саламандра','Шаурма']
+										li
+											a(href="")= val
+				li
+					a(href="") Электромеханическое
+				li
+					a(href="") Для раздачи
+				li
+					a(href="") Санитарно-гигиеническое

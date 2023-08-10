@@ -1,0 +1,207 @@
+.bg-menu {
+  position: fixed;
+  z-index: 998;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.2);
+  display: none;
+}
+.header {
+  padding-bottom: 0.1rem;
+  padding-top: 0.2rem;
+  position: relative;
+  z-index: 999;
+  box-shadow: 0px 11px 29px 0px rgba(56, 56, 56, 0.07);
+  background: #fff;
+  .container_flex {
+    gap: 2rem;
+    justify-content: space-between;
+    align-items: center;
+    @media (max-width: 992px) {
+      justify-content: space-between;
+    }
+    @media (max-width: 767px) {
+      gap: 1rem;
+      flex-wrap: wrap;
+      padding-bottom: 1rem;
+      align-items: center;
+    }
+  }
+  &__search {
+    flex: 1;
+    @media (max-width: 767px) {
+      order: 5;
+    }
+  }
+  &__links {
+    display: flex;
+    gap: 3rem;
+    align-items: flex-end;
+    @media (max-width: 992px) {
+      gap: 1rem;
+      align-items: center;
+    }
+  }
+  &__link {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    color: $color-link;
+    justify-content: center;
+    align-items: center;
+    img {
+      flex: none;
+    }
+    @media (max-width: 992px) {
+      font-size: 0px;
+      gap: 0rem;
+    }
+  }
+
+  @media (max-width: 992px) {
+    .menu {
+      display: none;
+    }
+  }
+}
+.logo {
+  @media (max-width: 767px) {
+    max-width: 90px;
+  }
+  img {
+    display: block;
+  }
+}
+.menu {
+  background: url(../img/menu_bg.png) bottom right no-repeat #fff;
+  padding-top: 2rem;
+  padding-bottom: 4rem;
+  min-height: 69rem;
+  left: 1.6rem;
+  right: 1.6rem;
+  position: absolute;
+  top: calc(100% + 1.6rem);
+  background-size: cover;
+  display: none;
+  @media (max-width: 992px) {
+    background: #fff;
+  }
+  &__title {
+    font-size: 2rem;
+    line-height: 3.5rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 2.5rem;
+  }
+  .menu-list {
+    @include ulClean;
+    max-width: 33rem;
+    position: relative;
+    li {
+      a {
+        font-size: 2rem;
+        line-height: 2.3rem;
+        padding: 1rem 0rem;
+        color: $color-text;
+        display: block;
+        border-radius: 1.4rem;
+        @include tr;
+        display: inline-flex;
+        &:hover,
+        &.active {
+          color: #fff;
+          font-weight: bold;
+          padding: 1rem 2rem;
+          background: #3a3a3a;
+        }
+      }
+      .menu-list__sub {
+        position: absolute;
+        left: 100%;
+        top: 0px;
+        @include ulClean;
+        border-left: 1px solid #e4e6e9;
+        width: 27rem;
+        display: none;
+        @media (max-width: 992px) {
+          position: static;
+        }
+        li {
+          position: relative;
+
+          a {
+            font-size: 1.6rem;
+            line-height: 2rem;
+            padding: 1rem;
+            @include tr;
+            display: inline-flex;
+
+            border-radius: 0px 1.4rem 1.4rem 0px;
+            border: 1px solid #fff;
+
+            &:hover,
+            &.active {
+              padding: 1rem 2rem;
+              background: #eff1f4;
+              background-position: calc(100% - 2.2rem) 50%;
+              border-color: #e4e6e9;
+              color: $color-text;
+            }
+          }
+          &.has-sub-menu {
+            a {
+              &:hover,
+              &.active {
+                padding-right: 4rem;
+                background: url(../img/arrow-down-sign-to-navigate.png) center
+                  right no-repeat #eff1f4;
+                background-position: calc(100% - 2.2rem) 50%;
+              }
+            }
+          }
+          .menu-list__sub-sub {
+            @include ulClean;
+            position: absolute;
+            left: 100%;
+            display: none;
+            top: 0px;
+            @media (max-width: 992px) {
+              position: static;
+              margin-left: 4rem;
+            }
+            a {
+              padding: 0;
+              text-decoration: underline;
+              border: none;
+              &:hover,
+              &.active {
+                color: $color-second;
+                padding: 0;
+                background: none;
+                font-weight: normal;
+              }
+            }
+          }
+          &:hover {
+            ul {
+              display: block;
+            }
+          }
+        }
+      }
+      &:hover {
+        ul {
+          display: block;
+        }
+      }
+    }
+  }
+}
+.open-menu {
+  .bg-menu,
+  .menu {
+    display: block;
+  }
+}

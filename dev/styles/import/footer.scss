@@ -1,0 +1,116 @@
+.footer {
+  .container_flex {
+    gap: 7rem;
+    justify-content: space-between;
+    @media (max-width: 992px) {
+      justify-content: flex-start;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+    @media (max-width: 767px) {
+      justify-content: flex-start;
+    }
+  }
+
+  &__top {
+    padding-top: 7rem;
+    padding-bottom: 5rem;
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+    @media (max-width: 767px) {
+      padding-top: 3rem;
+      padding-bottom: 3rem;
+    }
+  }
+  &__caption {
+    margin-bottom: 2rem;
+  }
+  &__intro {
+    width: 26%;
+    @media (max-width: 992px) {
+      width: 100%;
+    }
+  }
+  &__cities {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+    margin-bottom: 3.6rem;
+    align-items: flex-start;
+  }
+  &__city,
+  &__city-all {
+    padding: 1.5rem 1.8rem;
+    background: #eff1f4;
+    border-radius: 1.4rem;
+    line-height: 1em;
+    cursor: pointer;
+    border: 1px solid #e5e7ea;
+    @include tr;
+    &.active,
+    &:hover {
+      border-color: #3a3a3a;
+      background: #3a3a3a;
+      color: #fff;
+    }
+    &.hide {
+      display: none;
+    }
+  }
+  &__text {
+    color: $color-text;
+    a {
+      color: $color-text;
+    }
+  }
+  &__title {
+    font-weight: bold;
+  }
+  &__address {
+    display: none;
+    &.active {
+      display: block;
+    }
+  }
+  &__address-detail {
+    padding-left: 2.5rem;
+    background: url(../img/pin.png) 0px 4px no-repeat;
+    background-size: 1.3rem;
+    margin-bottom: 2rem;
+  }
+  &__phone {
+    padding-left: 2.5rem;
+    background: url(../img/phone-call.png) 0px 4px no-repeat;
+    margin-bottom: 2rem;
+    background-size: 1.5rem;
+  }
+
+  &__bottom {
+    padding: 2rem 0;
+    background: $color-footer-bg;
+    font-size: 1.6rem;
+    color: $color-footer-text;
+    @media (max-width: 767px) {
+      font-size: 1.4rem;
+    }
+    .container_flex {
+      justify-content: space-between;
+      align-items: center;
+      gap: 4rem;
+      @media (max-width: 992px) {
+        gap: 1rem;
+        flex-direction: column;
+      }
+      @media (max-width: 767px) {
+        gap: 0.5rem;
+      }
+    }
+    a {
+      color: $color-footer-text;
+      text-decoration: underline;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}

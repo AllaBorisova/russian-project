@@ -1,0 +1,62 @@
+main.main
+	.container
+		.breadcrumbs
+			ul
+				li
+					a(href="/") Главная
+				li -
+				li
+					span Корзина
+		h1.h1 Корзина
+			.catalog-count 1 товар
+		.red-info Добавление товара в корзину не является его резервацией!
+		.cart-detail
+			.cart-detail__left
+				.cart-detail__items
+					.cart-detail__top
+						.cart-detail__img
+						.cart-detail__name Наименование
+						.cart-detail__one-price Цена за ед. товара
+						.cart-detail__count Количество, шт
+						.cart-detail__full-price Стоимость
+					.cart-detail__item
+						.cart-detail__img
+							a(href="")
+								img(src="./img/product-big.png" alt="")
+						.cart-detail__name 
+							.cart-detail__artikul Код товара: 74967
+							a.cart-detail__product-name(href="") Плита индукционная AIRHOT IP3500
+							a.cart-detail__delete(href="") Удалить
+						.cart-detail__one-price 8 926 руб.
+						.cart-detail__count.count
+							span.count__minus -
+							input.count__prod(type="number" name="" value="1")
+							span.count__plus +
+						.cart-detail__full-price 8 926 руб.
+				.cart-detail__bottom
+					.coupon 
+						.coupon__title Введите скидочный код:
+						form.coupon__form(action="")
+							input(type="text" placeholder="Например: ЛЕТО23")
+							input(type="submit" value="")
+					a.button_refresh(href="") Обновить
+			.cart-detail__right 
+				.cart-detail__title Стоимость заказа
+				.cart-detail__summ 
+					span Товаров на сумму
+					span 8 926 руб.
+				.cart-detail__delivery 
+					span Доставка
+					.cart-detail__radios
+						label.custom-radio.custom-radio_reverse-red
+							input.custom-radio__radio(type="radio" name="delivery")
+							span.custom-radio__span
+							span.custom-radio__label Самовывоз (бесплатно)
+						label.custom-radio.custom-radio_reverse-red
+							input.custom-radio__radio(type="radio" name="delivery")
+							span.custom-radio__span
+							span.custom-radio__label Курьер
+				.cart-detail__itog 
+					span Итого:
+					span.cart-detail__price 8 926 руб.
+				a.button.button_full-red(href="") Перейти к оформлению заказа

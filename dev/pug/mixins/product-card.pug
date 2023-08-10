@@ -1,0 +1,21 @@
+mixin product-card(imgsrc, option1, option2, option3, price, name)
+  .catalog__item
+    .catalog__img-slider
+      .catalog__img(style='background-image:url(./img/' + imgsrc +')')
+      .catalog__img(style='background-image:url(./img/' + imgsrc +')')
+      .catalog__img(style='background-image:url(./img/' + imgsrc +')')
+    a.catalog__name(href="")= name
+    .catalog__price= price
+    .catalog__options
+      .catalog__option
+        .catalog__option-name Габариты, мм
+        .catalog__option-value= option1
+      .catalog__option
+        .catalog__option-name Напряжение, В
+        .catalog__option-value= option2
+      .catalog__option
+        .catalog__option-name Мощность, кВт
+        .catalog__option-value= option3
+    .catalog__buttons
+      a.button(href="") Подробнее
+      a.button-favorite.active(href="")

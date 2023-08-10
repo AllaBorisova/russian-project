@@ -1,0 +1,215 @@
+.button {
+  @include flexcc;
+  display: inline-flex;
+  text-decoration: none;
+  border: 1px solid $color-second;
+  @include tr;
+  font-size: 1.8rem;
+  line-height: 1em;
+  height: 4.7rem;
+  min-width: 19rem;
+  cursor: pointer;
+  white-space: nowrap;
+  color: $color-text;
+  border-radius: 2.25rem;
+  font-weight: 500;
+  background: #fff;
+  @media (max-width: 767px) {
+    // padding: 1rem 0.8rem;
+    font-size: 1.4rem;
+  }
+  &_full {
+    width: 100%;
+  }
+
+  @media (max-width: 767px) {
+    // padding: 2.2rem 1.4rem;
+  }
+  &:hover {
+    background: $color-second;
+    color: #fff;
+  }
+  &_colors {
+    background: $color-primary;
+    color: #fff;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    font-weight: bold;
+    &:hover {
+      box-shadow: 0px 9px 21px 0px rgba(45, 50, 115, 0.25);
+    }
+    @media (max-width: 767px) {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+  }
+  &_consult {
+    padding-left: 3rem;
+    padding-right: 3rem;
+    font-weight: bold;
+    @media (max-width: 767px) {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+  }
+  &_bordered-white {
+    color: #fff;
+    border-color: #fff;
+    background: none;
+    &:hover {
+      background: $color-second;
+      border-color: $color-second;
+      color: #fff;
+    }
+  }
+  &_white {
+    background: #fff;
+    min-width: auto;
+    padding-left: 2.7rem;
+    padding-right: 2.7rem;
+    border-color: #fff;
+    &:hover {
+      background: $color-second;
+      border-color: $color-second;
+      color: #fff;
+    }
+  }
+  &_red {
+    padding: 0 2.8rem;
+    color: #fff;
+    font-weight: 500;
+    height: 5.6rem;
+    font-size: 1.8rem;
+    border-radius: 27.5rem;
+    background: $color-second;
+  }
+  &_full-red {
+    width: 100%;
+    background: $color-second;
+    color: #fff;
+    height: 5.5rem;
+    border-radius: 2.75rem;
+    font-size: 1.6rem;
+    font-weight: normal;
+  }
+  &_refresh {
+    @include flexcc;
+    height: 4.8rem;
+    padding-left: 5.2rem;
+    padding-right: 2.4rem;
+    border-radius: 2.4rem;
+    background: url(../img/sync.png) 2.2rem center no-repeat #e9e9e9;
+    background-size: 2.1rem;
+    font-size: 1.6rem;
+    color: #8d9298;
+  }
+  &_change {
+    width: 100%;
+    height: 5.6rem;
+    border-radius: 2.75rem;
+    margin-bottom: 1.7rem;
+    font-weight: 500;
+    gap: 0.9rem;
+  }
+  &_big {
+    padding: 0 3.8rem;
+    height: 5.6rem;
+    border-radius: 2.75rem;
+  }
+  // &_red {
+  //   background: #ff5e59;
+  //   border-color: #ff5e59;
+  //   font-weight: bold;
+  //   color: #fff;
+  //   &:hover {
+  //     box-shadow: 0px 9px 21px 0px rgba(45, 50, 115, 0.25);
+  //     background: #ff5e59;
+  //   }
+  // }
+  // &_red-bordered {
+  //   border-color: #ff5e59;
+  //   font-weight: bold;
+  //   &:hover {
+  //     background: #ff5e59;
+  //     color: #fff;
+  //   }
+  // }
+}
+.button-favorite {
+  @include flexcc;
+  width: 4.7rem;
+  height: 4.7rem;
+  border-radius: 50%;
+  border: 1px solid #e7e9ec;
+  flex: none;
+  background: url(../img/favorite.png) center no-repeat;
+  background-size: 2.1rem;
+  &.active {
+    background-image: url(../img/heart_active.png);
+  }
+}
+.download-link {
+  padding-left: 2.6rem;
+  display: inline-flex;
+  background: url(../img/download.png) center left no-repeat;
+  background-size: 2rem;
+  color: #fff;
+  text-decoration: underline;
+  font-size: 1.8rem;
+  font-weight: 500;
+  &:hover {
+    text-decoration: none;
+  }
+}
+.nav-catalog {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 5.4rem;
+  color: #fff;
+  background: $color-second;
+  padding: 0 3rem;
+  border-radius: 2.75rem;
+  font-size: 1.8rem;
+  gap: 0.7rem;
+  @media (max-width: 767px) {
+    font-size: 0px;
+    gap: 0;
+    height: 4.4rem;
+    width: 4.4rem;
+    border-radius: 2.2rem;
+  }
+  .hamburger {
+    padding: 0px;
+    display: block;
+    height: 1.5rem;
+  }
+  .hamburger-box {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  .hamburger-inner,
+  .hamburger-inner::before,
+  .hamburger-inner::after {
+    width: 1.5rem;
+    background: #fff;
+    height: 1px;
+  }
+  .hamburger-inner::before {
+    top: -5px;
+  }
+  .hamburger-inner::after {
+    bottom: -5px;
+  }
+}
+.button-callback {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid $color-second;
+  height: 4.6rem;
+  padding: 0 3.5rem;
+  font-weight: 500;
+  color: $color-text;
+  font-size: 1.8rem;
+  border-radius: 2.25rem;
+}

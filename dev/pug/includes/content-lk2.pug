@@ -1,0 +1,32 @@
+main.main
+	.container
+		.breadcrumbs
+			ul
+				li
+					a(href="/") Главная
+				li -
+				li
+					span Личный кабинет
+		.lk
+			.lk__top
+				.lk__title Здравствуйте, Пользователь!
+				.lk__text Это Ваш личный кабинет. Здесь вы сможете найти информацию о своихпредыдущих заказах и сохранить свои данные для удобного заполнения форм
+			.lk__wrap
+				.lk__left
+					.lk__menu
+						ul
+							li
+								a.lk__link-user(href="") Личные данные
+							li
+								a.lk__link-favorite.active(href="") Избранные товары
+							li
+								a.lk__link-history(href="") История заказов
+					a.button.button_change(href="")
+						img(src="./img/lock.png" alt="")
+						| Сменить пароль
+					a.button.button_red(href="") Выйти из кабинета
+				.lk__right
+					.lk__subtitle Избранные товары
+					.catalog__items.catalog_items_4
+						- for (var x = 0; x < 4; x++)
+							+product-card('product1.png', '360x280x75', '220', '2', '44 660 руб', 'Плита индукционная AIRHOT IP2000 ')

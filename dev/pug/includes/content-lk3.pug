@@ -1,0 +1,65 @@
+main.main
+	.container
+		.breadcrumbs
+			ul
+				li
+					a(href="/") Главная
+				li -
+				li
+					span Личный кабинет
+		.lk
+			.lk__top
+				.lk__title Здравствуйте, Пользователь!
+				.lk__text Это Ваш личный кабинет. Здесь вы сможете найти информацию о своихпредыдущих заказах и сохранить свои данные для удобного заполнения форм
+			.lk__wrap
+				.lk__left
+					.lk__menu
+						ul
+							li
+								a.lk__link-user(href="") Личные данные
+							li
+								a.lk__link-favorite(href="") Избранные товары
+							li
+								a.lk__link-history.active(href="") История заказов
+					a.button.button_change(href="")
+						img(src="./img/lock.png" alt="")
+						| Сменить пароль
+					a.button.button_red(href="") Выйти из кабинета
+				.lk__right
+					.lk__subtitle История заказов
+					.lk-order
+						.lk-order__top 
+							.lk-order__title Заказ № 123
+							.lk-order__status.lk-order__status_success Выполнено
+						.lk-order__middle
+							.lk-order__middle-top
+								.order-detail__item-name 
+									.order-detail__item-img
+										a(href="")
+											img(src="./img/product-big.png" alt="")
+									.order-detail__item-desc
+										.order-detail__item-artikul Код товара: 74967
+										a.order-detail__item-link(href="") Плита индукционная AIRHOT IP3500
+								.lk-order__prices
+									.lk-order__old-price 9 880 ₽
+									.lk-order__price 8 926 руб.
+							.lk-order__middle-bottom
+								.lk-order__pay-info
+									.lk-order__pay Оплата картой
+									.lk-order__pay-status Оплачено
+								.lk-order__info
+									.lk-order__option
+										span ЦЕНА
+										span 8 926 руб.
+									.lk-order__option
+										span СКИДКА ПО ПРОМОКОДУ
+										span 0 руб. 
+									.lk-order__option
+										span ДОСТАВКА
+										span Самовывоз, 0 руб.
+									.lk-order__option.lk-order__option-itog 
+										span ИТОГО:
+										span 8 926 руб.
+						.lk-order__bottom 
+							.lk-order__address-title Адрес доставки
+							.lk-order__address Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua

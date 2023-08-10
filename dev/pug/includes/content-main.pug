@@ -1,0 +1,95 @@
+main.main
+	.container
+		.section-links
+			a.section-links__link(href="")
+				img(src="./img/tax.png" alt="")
+				| Скидки
+			a.section-links__link(href="")
+				img(src="./img/coupon.png" alt="")
+				| Акции
+			a.section-links__link(href="")
+				img(src="./img/fire.png" alt="")
+				| Новинки
+			select.select-city
+				option Москва
+				option Москва
+				option Москва
+	.section-hero
+		.container
+			.section-hero__slider
+				.section-hero__item(style="background-image:url(./img/slider.jpg)")
+					.section-hero__inner
+						.section-hero__title Текст акции в одну или несколько строк
+						.section-hero__subtitle Lorem ipsum dolor sit amet, consectetur adipisicing elit
+						a.button.button_bordered-white(href="") Подробнее
+				.section-hero__item(style="background-image:url(./img/slider.jpg)")
+					.section-hero__inner
+						.section-hero__title Текст акции в одну или несколько строк
+						.section-hero__subtitle Lorem ipsum dolor sit amet, consectetur adipisicing elit
+						a.button.button_bordered-white(href="") Подробнее
+
+	.section-info
+		.container
+			.section-info__items
+				.section-info__item
+					.section-info__title Оборудование под маркой AIRHOT производится
+					.section-info__text с 1996 года
+				.section-info__item
+					.section-info__title Общая площадь предприятия
+					.section-info__text 130 000,00 м²
+				.section-info__item
+					.section-info__title Оборудование под маркой AIRHOT экспортируется более чем в
+					.section-info__text 40 стран мира
+			.section-info__photo(style="background-image:url(./img/info.png)")
+			.section-info__about
+				p Основное направление производства: профессиональное кухонное оборудование, а именно: блинницы, грили, картофелечистки, пилы для мяса и многое другое механическое оборудование для кухонь ресторана, кафе, бистро и общепита.
+				p
+					strong Качество и высокотехнологичность оборудования AIRHOT подтверждается множеством наград, сертификатами и доверием партнеров.
+				p Оборудование под маркой AIRHOT производится под контролем ООО "Метроном" (ОГРН 1037601003329)
+	.section-catalog 
+		.container
+			.catalog__items
+				.catalog__banner.catalog__banner_first
+					.catalog__banner-title Индукционные плиты
+					a.button.button_white(href="") Смотреть все
+				- for (var x = 0; x < 4; x++)
+					+product-card('product1.png', '360x280x75', '220', '2', '44 660 руб', 'Плита индукционная AIRHOT IP2000 ')
+	.section-catalog 
+		.container
+			.catalog__items
+				.catalog__banner.catalog__banner_second
+					.catalog__banner-title Грили
+					a.button.button_white(href="") Смотреть все
+				- for (var x = 0; x < 4; x++)
+					+product-card('product2.png', '360x280x75', '220', '2', '44 660 руб', 'Плита индукционная AIRHOT IP2000 ')
+	.section-catalog 
+		.container
+			.catalog__items
+				.catalog__banner.catalog__banner_third
+					.catalog__banner-title Блинницы
+					a.button.button_white(href="") Смотреть все
+				- for (var x = 0; x < 4; x++)
+					+product-card('product2.png', '360x280x75', '220', '2', '44 660 руб', 'Плита индукционная AIRHOT IP2000 ')
+	.section-catalog 
+		.container
+			.catalog__items
+				.catalog__banner.catalog__banner_fourth
+					.catalog__banner-title Вафельницы
+					a.button.button_white(href="") Смотреть все
+				- for (var x = 0; x < 4; x++)
+					+product-card('product1.png', '360x280x75', '220', '2', '44 660 руб', 'Плита индукционная AIRHOT IP2000 ')
+	.section-catalog 
+		.container
+			.catalog__items
+				.catalog__banner.catalog__banner_fifth
+					.catalog__banner-title Фритюрницы
+					a.button.button_white(href="") Смотреть все
+				- for (var x = 0; x < 4; x++)
+					+product-card('product2.png', '360x280x75', '220', '2', '44 660 руб', 'Плита индукционная AIRHOT IP2000 ')
+
+	.section-red
+		.container
+			.section-red__info Посмотрите весь каталог товаров бренда AIRHOT
+			.section-red__buttons
+				a.button.button_white(href="") Смотреть каталог
+				a.download-link(href="") Скачать каталог

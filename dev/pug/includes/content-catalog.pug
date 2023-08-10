@@ -1,0 +1,40 @@
+main.main
+  .container
+    .breadcrumbs
+      ul
+        li
+          a(href="/") Главная
+        li -
+        li
+          a(href="") Каталог
+        li -
+        li
+          span Индукционные плиты
+    h1.h1 Индукционные плиты
+    .catalog
+      .catalog__sort
+          a.catalog__sort-link.active(href="") Популярные
+          a.catalog__sort-link(href="") Новинки
+          a.catalog__sort-link(href="") Сначала дешевле
+          a.catalog__sort-link(href="") Сначала дороже
+          a.catalog__sort-link(href="") Со скидкой
+          span.catalog__count Найдено 50 товаров
+      .catalog__items
+        - for (var x = 0; x < 5; x++)
+          +product-card('product1.png', '360x280x75', '220', '2', '44 660 руб', 'Плита индукционная AIRHOT IP2000 ')
+          +product-card('product2.png', '360x280x75', '220', '2', '44 660 руб', 'Плита индукционная AIRHOT IP2000 ')
+      .pagination
+        ul
+          li
+            a(href="")
+              img(src="./img/arrow-left.png" alt="")
+          li
+            a.active(href="") 1
+          li
+            a(href="") 2
+          li
+            a(href="") 3
+          li
+            a(href="")
+              img(src="./img/arrow-right.png" alt="")
+

@@ -1,0 +1,199 @@
+.lk {
+  &__top {
+    min-height: 30rem;
+    display: flex;
+    flex-direction: column;
+    padding: 4rem;
+    background: url(../img/lk.png) bottom right no-repeat;
+    background-size: cover;
+    border-radius: 1rem;
+    justify-content: flex-end;
+    margin-bottom: 4rem;
+    @media (max-width: 767px) {
+      min-height: auto;
+      background: #f5f5f5;
+    }
+  }
+  &__title {
+    font-size: 3.3rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+  }
+  &__text {
+    max-width: 56rem;
+  }
+
+  &__wrap {
+    display: flex;
+    gap: 3.5rem;
+    @media (max-width: 767px) {
+      flex-wrap: wrap;
+    }
+  }
+  &__left {
+    width: 27rem;
+    flex: none;
+    .button_red {
+      width: 100%;
+    }
+    @media (max-width: 767px) {
+      width: 100%;
+    }
+  }
+  &__right {
+    width: calc(100% - 27rem - 3.5rem);
+    @media (max-width: 767px) {
+      width: 100%;
+    }
+  }
+
+  &__menu {
+    padding: 1.8rem 0.8rem;
+    border: 1px solid #ebf0f5;
+    margin-bottom: 4rem;
+    ul {
+      @include ulClean;
+      li {
+        a {
+          font-size: 1.8rem;
+          display: flex;
+          align-items: center;
+          line-height: 1em;
+          height: 4.6rem;
+          padding-left: 4.3rem;
+          border-radius: 2.3rem;
+        }
+      }
+    }
+  }
+  &__link-user {
+    background: url(../img/lk-user.png) 1.9rem center no-repeat;
+    background-size: 1.3rem;
+    &.active {
+      background-image: url(../img/lk-user_active.png);
+      background-color: #f6f6f6;
+    }
+  }
+  &__link-favorite {
+    background: url(../img/like.png) 1.7rem center no-repeat;
+    background-size: 1.7rem;
+    &.active {
+      background-image: url(../img/like_active.png);
+      background-color: #f6f6f6;
+    }
+  }
+  &__link-history {
+    background: url(../img/shopping-list.png) 1.9rem center no-repeat;
+    background-size: 1.3rem;
+    &.active {
+      background-image: url(../img/shopping-list_active.png);
+      background-color: #f6f6f6;
+    }
+  }
+  &__subtitle {
+    margin-bottom: 4rem;
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+  &-order {
+    border: 1px solid #e4e6e9;
+    padding: 3.4rem 3.8rem;
+    @media (max-width: 767px) {
+      padding: 2rem 2rem;
+    }
+    &__top {
+      border-bottom: 1px solid #e4e6e9;
+      padding-bottom: 2.5rem;
+      margin-bottom: 3.3rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      align-items: center;
+    }
+    &__bottom {
+      margin-top: 3.3rem;
+      padding-top: 2.5rem;
+      border-top: 1px solid #e4e6e9;
+    }
+    &__title {
+      font-size: 2.5rem;
+      line-height: 1em;
+    }
+    &__status {
+      padding-left: 2.7rem;
+      font-size: 1.8rem;
+      font-weight: bold;
+      background-position: center left;
+      background-repeat: no-repeat;
+      &_success {
+        color: #7bc34a;
+        background-image: url(../img/check.png);
+        background-size: 1.7rem;
+      }
+    }
+    &__address-title {
+      padding-left: 2rem;
+      margin-bottom: 2rem;
+      font-size: 1.8rem;
+      background-position: center left;
+      background-repeat: no-repeat;
+      background-image: url(../img/pin.png);
+      background-size: 1.3rem;
+    }
+    &__middle-top {
+      margin-bottom: 4rem;
+    }
+    &__middle-top,
+    &__middle-bottom {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+    .order-detail__item-name {
+      padding: 0;
+    }
+    &__pay-info {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2.3rem;
+      align-items: flex-start;
+    }
+    &__pay {
+      padding-left: 2.1rem;
+      background: url(../img/ruble.png) left center no-repeat;
+      background-size: 1.5rem;
+    }
+    &__pay-status {
+      padding-left: 2.7rem;
+      background: url(../img/availible.png) left center no-repeat;
+      color: #7bc34a;
+      background-size: 1.5rem;
+    }
+    &__prices {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      font-size: 3rem;
+    }
+    &__old-price {
+      text-decoration: line-through;
+    }
+    &__price {
+      font-weight: bold;
+    }
+    &__info {
+      width: 50rem;
+    }
+    &__option {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+    &__option-itog {
+      font-size: 2.5rem;
+      font-weight: bold;
+    }
+  }
+}
